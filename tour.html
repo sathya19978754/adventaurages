@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours - Adventurage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Dokdo&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="container">
+            <p class="mb-0">FEELING SPONTANEOUS?! SAVE ON TRIPS DEPARTING SOON</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><h1 class="logo">Adventurage</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tour.html">Tour</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <img src="images/user icon.png" alt="User" class="user-icon" onclick="navigateToLogin()">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tours Page Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <div class="col-md-3">
+                <div class="filters-sidebar">
+                    <!-- Search Section -->
+                    <div class="search-section mb-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control search-input" placeholder="Search destinations or activities">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <img src="images/search icon.png" alt="Search" width="20">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Active Filters -->
+                    <div class="active-filters mb-3">
+                        <p class="mb-2"><strong>Active Filters:</strong></p>
+                    </div>
+
+                    <!-- Activity Filter -->
+                    <div class="filter-section mb-4">
+                        <div class="filter-header" data-bs-toggle="collapse" data-bs-target="#activityFilter">
+                            <h5 class="mb-0">
+                                <img src="images/activity filter icon.png" alt="Activity" width="20" class="me-2">
+                                ACTIVITY
+                            </h5>
+                            <img src="images/arrow.png" alt="Arrow" width="15" class="arrow-icon">
+                        </div>
+                        <div class="collapse show" id="activityFilter">
+                            <div class="filter-content">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="hiking">
+                                    <label class="form-check-label" for="hiking">Hiking</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="snorkeling">
+                                    <label class="form-check-label" for="snorkeling">Snorkeling</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="cycling">
+                                    <label class="form-check-label" for="cycling">Cycling</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="wildSwimming">
+                                    <label class="form-check-label" for="wildSwimming">Wild Swimming</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="rafting">
+                                    <label class="form-check-label" for="rafting">Rafting</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="northernLights">
+                                    <label class="form-check-label" for="northernLights">Northern Lights</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Difficulty Filter -->
+                    <div class="filter-section mb-4">
+                        <div class="filter-header" data-bs-toggle="collapse" data-bs-target="#difficultyFilter">
+                            <h5 class="mb-0">
+                                <img src="images/difficult icon.png" alt="Difficulty" width="20" class="me-2">
+                                DIFFICULTY
+                            </h5>
+                            <img src="images/arrow.png" alt="Arrow" width="15" class="arrow-icon">
+                        </div>
+                        <div class="collapse show" id="difficultyFilter">
+                            <div class="filter-content">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="easy">
+                                    <label class="form-check-label" for="easy">Easy</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="moderate">
+                                    <label class="form-check-label" for="moderate">Moderate</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="challenging">
+                                    <label class="form-check-label" for="challenging">Challenging</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="tough">
+                                    <label class="form-check-label" for="tough">Tough</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Destination Filter -->
+                    <div class="filter-section mb-4">
+                        <div class="filter-header" data-bs-toggle="collapse" data-bs-target="#destinationFilter">
+                            <h5 class="mb-0">
+                                <img src="images/destination filter icon.png" alt="Destination" width="20" class="me-2">
+                                DESTINATION
+                            </h5>
+                            <img src="images/arrow.png" alt="Arrow" width="15" class="arrow-icon">
+                        </div>
+                        <div class="collapse show" id="destinationFilter">
+                            <div class="filter-content">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="europe">
+                                    <label class="form-check-label" for="europe">Europe</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="asia">
+                                    <label class="form-check-label" for="asia">Asia</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="africa">
+                                    <label class="form-check-label" for="africa">Africa</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="southAmerica">
+                                    <label class="form-check-label" for="southAmerica">South America</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="northAmerica">
+                                    <label class="form-check-label" for="northAmerica">North America</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="oceania">
+                                    <label class="form-check-label" for="oceania">Oceania</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content - Tour Cards -->
+            <div class="col-md-9">
+                <div class="tour-results">
+                    <div class="row">
+                        <!-- Tour Card 1 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="tour-result-card">
+                                <div class="tour-image">
+                                    <img src="images/tour 1.png" alt="Mont Blanc" class="img-fluid">
+                                    <div class="difficulty-badge easy-badge">Easy</div>
+                                    <div class="difficulty-badge tough-badge">Tough</div>
+                                </div>
+                                <div class="tour-card-content">
+                                    <div class="tour-location">France Italy Switzerland</div>
+                                    <h4 class="tour-title">TREK THE MOUNT BU MONT</h4>
+                                    <div class="tour-rating">
+                                        <img src="images/rating star icon.png" alt="Star" width="16">
+                                        <span>4.8 (32 reviews)</span>
+                                        <div class="tour-price">
+                                            <img src="images/rupee icon.png" alt="Rupee" width="16">
+                                            <span>40,000</span>
+                                        </div>
+                                    </div>
+                                    <div class="tour-availability">Available Jun-Sep</div>
+                                    <div class="difficulty-level moderate">Moderate</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tour Card 2 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="tour-result-card">
+                                <div class="tour-image">
+                                    <img src="images/tour 2.png" alt="Mount Toubkal" class="img-fluid">
+                                </div>
+                                <div class="tour-card-content">
+                                    <div class="tour-location">Morocco North Africa</div>
+                                    <h4 class="tour-title">CLIMB MOUNT TOUBKAL</h4>
+                                    <div class="tour-rating">
+                                        <img src="images/rating star icon.png" alt="Star" width="16">
+                                        <span>4.6 (20 reviews)</span>
+                                        <div class="tour-price">
+                                            <img src="images/rupee icon.png" alt="Rupee" width="16">
+                                            <span>32,520</span>
+                                        </div>
+                                    </div>
+                                    <div class="tour-availability">Available Dec-Feb</div>
+                                    <div class="difficulty-level easy">Easy</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tour Card 3 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="tour-result-card">
+                                <div class="tour-image">
+                                    <img src="images/tour 3.png" alt="Silk Road" class="img-fluid">
+                                </div>
+                                <div class="tour-card-content">
+                                    <div class="tour-location">Georgia</div>
+                                    <h4 class="tour-title">CYCLE THE SILK ROAD</h4>
+                                    <div class="tour-rating">
+                                        <img src="images/rating star icon.png" alt="Star" width="16">
+                                        <span>4.9 (15 reviews)</span>
+                                        <div class="tour-price">
+                                            <img src="images/rupee icon.png" alt="Rupee" width="16">
+                                            <span>28,000</span>
+                                        </div>
+                                    </div>
+                                    <div class="tour-availability">Available Jan-Mar</div>
+                                    <div class="difficulty-level challenging">Challenging</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tour Card 4 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="tour-result-card">
+                                <div class="tour-image">
+                                    <img src="images/tour 4.png" alt="Arctic Circle" class="img-fluid">
+                                </div>
+                                <div class="tour-card-content">
+                                    <div class="tour-location">Norway Europe</div>
+                                    <h4 class="tour-title">ARCTIC CIRCLE FAT EXPENDITURE</h4>
+                                    <div class="tour-rating">
+                                        <img src="images/rating star icon.png" alt="Star" width="16">
+                                        <span>4.2 (19 reviews)</span>
+                                        <div class="tour-price">
+                                            <img src="images/rupee icon.png" alt="Rupee" width="16">
+                                            <span>25,780</span>
+                                        </div>
+                                    </div>
+                                    <div class="tour-availability">Available Jun-Sep</div>
+                                    <div class="difficulty-level tough">Tough</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tour Card 5 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="tour-result-card">
+                                <div class="tour-image">
+                                    <img src="images/tour 5.png" alt="Coast to Coast" class="img-fluid">
+                                </div>
+                                <div class="tour-card-content">
+                                    <div class="tour-location">New Zealand Oceania</div>
+                                    <h4 class="tour-title">COAST TO COAST EXPEDITION</h4>
+                                    <div class="tour-rating">
+                                        <img src="images/rating star icon.png" alt="Star" width="16">
+                                        <span>4.5 (13 reviews)</span>
+                                        <div class="tour-price">
+                                            <img src="images/rupee icon.png" alt="Rupee" width="16">
+                                            <span>72,000</span>
+                                        </div>
+                                    </div>
+                                    <div class="tour-availability">Available Apr-Jun</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tour Card 6 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="tour-result-card">
+                                <div class="tour-image">
+                                    <img src="images/tour 6.png" alt="Aurora in Lofoten" class="img-fluid">
+                                </div>
+                                <div class="tour-card-content">
+                                    <div class="tour-location">Pennsylvania US State</div>
+                                    <h4 class="tour-title">CHASE THE AURORA IN LOFOTEN</h4>
+                                    <div class="tour-rating">
+                                        <img src="images/rating star icon.png" alt="Star" width="16">
+                                        <span>4.6 (36 reviews)</span>
+                                        <div class="tour-price">
+                                            <img src="images/rupee icon.png" alt="Rupee" width="16">
+                                            <span>48,120</span>
+                                        </div>
+                                    </div>
+                                    <div class="tour-availability">Available Jan-Mar</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Destination Tabs Section -->
+    <section class="destination-section">
+        <div class="container">
+            <div class="destination-tabs">
+                <ul class="nav nav-tabs" id="destinationTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="destination-tab" data-bs-toggle="tab" data-bs-target="#destination" type="button" role="tab">Destination</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="activities-tab" data-bs-toggle="tab" data-bs-target="#activities" type="button" role="tab">Activities</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="collections-tab" data-bs-toggle="tab" data-bs-target="#collections" type="button" role="tab">Collections</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="destinationTabsContent">
+                    <div class="tab-pane fade show active" id="destination" role="tabpanel">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                <div class="destination-card">
+                                    <img src="images/europe home.png" alt="Europe" class="destination-image">
+                                    <h5>Europe</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                <div class="destination-card">
+                                    <img src="images/asia home.png" alt="Asia" class="destination-image">
+                                    <h5>Asia</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                <div class="destination-card">
+                                    <img src="images/africa home.png" alt="Africa" class="destination-image">
+                                    <h5>Africa</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                <div class="destination-card">
+                                    <img src="images/south america home.png" alt="South America" class="destination-image">
+                                    <h5>South America</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                <div class="destination-card">
+                                    <img src="images/north america home.png" alt="North America" class="destination-image">
+                                    <h5>North America</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                <div class="destination-card">
+                                    <img src="images/oceania home.png" alt="Oceania" class="destination-image">
+                                    <h5>Oceania</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="activities" role="tabpanel">
+                        <div class="activities-content">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                    <div class="destination-card">
+                                        <img src="images/costa rica.png" alt="Hiking" class="destination-image">
+                                        <h5>Hiking</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                    <div class="destination-card">
+                                        <img src="images/fuji mount.png" alt="Cycling" class="destination-image">
+                                        <h5>Cycling</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                    <div class="destination-card">
+                                        <img src="images/kiliman.png" alt="Rafting" class="destination-image">
+                                        <h5>Rafting</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                    <div class="destination-card">
+                                        <img src="images/africa home.png" alt="Snorkeling" class="destination-image">
+                                        <h5>Snorkeling</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                    <div class="destination-card">
+                                        <img src="images/europe home.png" alt="Wild Swimming" class="destination-image">
+                                        <h5>Wild Swimming</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                    <div class="destination-card">
+                                        <img src="images/asia home.png" alt="Northern Lights" class="destination-image">
+                                        <h5>Northern Lights</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="collections" role="tabpanel">
+                        <div class="collections-content">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                    <div class="destination-card">
+                                        <img src="images/north america home.png" alt="New Adventure" class="destination-image">
+                                        <h5>New Adventure</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                    <div class="destination-card">
+                                        <img src="images/south america home.png" alt="Winter Sun" class="destination-image">
+                                        <h5>Winter Sun</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                    <div class="destination-card">
+                                        <img src="images/africa home.png" alt="Desert & Dunes" class="destination-image">
+                                        <h5>Desert & Dunes</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                    <div class="destination-card">
+                                        <img src="images/costa rica.png" alt="Foodie Adventure" class="destination-image">
+                                        <h5>Foodie Adventure</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                    <div class="destination-card">
+                                        <img src="images/fuji mount.png" alt="Jungle Adventure" class="destination-image">
+                                        <h5>Jungle Adventure</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                    <div class="destination-card">
+                                        <img src="images/oceania home.png" alt="Islands Adventure" class="destination-image">
+                                        <h5>Islands Adventure</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Features Section -->
+    <section class="bottom-features-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="feature-card">
+                        <img src="images/bottom icon.png" alt="Feature 1" class="feature-icon">
+                        <p>Explore place you couldn't yourself</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-card">
+                        <img src="images/bottom icon 1.png" alt="Feature 2" class="feature-icon">
+                        <p>Go with the outdoor specialists</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-card">
+                        <img src="images/bottom icon 2.png" alt="Feature 3" class="feature-icon">
+                        <p>Join a small like-minded group</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-card">
+                        <img src="images/bottom icon 3.png" alt="Feature 4" class="feature-icon">
+                        <p>Hassle-free from start to finish</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-image">
+            <img src="images/footer image.png" alt="Footer" class="img-fluid">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="footer-logo">Adventurage</h3>
+                    <p>-BOOK WITH CONFIDENCE-</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>ABOUT</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Our Impact</a></li>
+                        <li><a href="#">Meet the Team</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>CUSTOMERS</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Agency Booking</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p>&copy; Copyright Adventurage Ltd Registration Number 1.0 2458697</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

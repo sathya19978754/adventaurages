@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventurage - Your Next Adventure Awaits</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Dokdo&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="container">
+            <p class="mb-0">FEELING SPONTANEOUS?! SAVE ON TRIPS DEPARTING SOON</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><h1 class="logo">Adventurage</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="tour.html">Tour</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <img src="images/user icon.png" alt="User" class="user-icon" onclick="navigateToLogin()">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Background and Dropdown Menus -->
+    <section class="hero-section-with-bg">
+        <div class="hero-background-overlay">
+            <img src="images/aurora-background.png" alt="Aurora Adventure Background" class="hero-bg-image">
+        </div>
+        <div class="container hero-container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content-left">
+                        <div class="rating-section">
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+                            <span class="rating-text">4.8 20 reviews</span>
+                        </div>
+                        <h1 class="hero-title-main">HUT-TO-HUT TREKKING</h1>
+                        <div class="location-info-main">
+                            <span class="location">📍 SPAIN</span>
+                            <span class="duration">🌙 2 NIGHTS</span>
+                            <span class="difficulty">👥 CHALLENGING</span>
+                            <span class="stars-rating">★★★</span>
+                        </div>
+                        <p class="hero-description-main">
+                            A wild trek amongst the high peaks of this hidden gem of a mountain range in Northern Spain
+                        </p>
+                        
+                        <div class="whats-included-main">
+                            <h3>What's Included?</h3>
+                            <div class="included-items-main">
+                                <div class="included-item-main">
+                                    <img src="images/tick icon.png" alt="tick" class="tick-icon">
+                                    <span>Activities & Certified Guides</span>
+                                </div>
+                                <div class="included-item-main">
+                                    <img src="images/tick icon.png" alt="tick" class="tick-icon">
+                                    <span>Meals</span>
+                                </div>
+                                <div class="included-item-main">
+                                    <img src="images/tick icon.png" alt="tick" class="tick-icon">
+                                    <span>Transfers</span>
+                                </div>
+                                <div class="included-item-main">
+                                    <img src="images/tick icon.png" alt="tick" class="tick-icon">
+                                    <span>All Accommodation</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="price-section-main">
+                            <div class="price-main">
+                                <img src="images/rupee icon.png" alt="rupee" class="rupee-icon">
+                                <span class="amount">40,000</span>
+                            </div>
+                            <p class="price-note">Including flights</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Options Section -->
+    <section class="booking-options-section">
+        <div class="container">
+            <div class="row">
+                <!-- Left Side - Departure Dates -->
+                <div class="col-md-6">
+                    <div class="departure-dates-section">
+                        <h3>DEPARTURE DATES</h3>
+                        
+                        <!-- July 2025 -->
+                        <div class="month-group">
+                            <button class="month-header" data-bs-toggle="collapse" data-bs-target="#july2025">
+                                JULY 2025 <span class="arrow">▲</span>
+                            </button>
+                            <div id="july2025" class="collapse show">
+                                <div class="date-option fully-booked">
+                                    <div class="date-details">
+                                        <strong>SUNDAY 22nd JULY 2025</strong>
+                                        <small>to SATURDAY 28nd 2025</small>
+                                        <span class="status">FULLY BOOKED</span>
+                                    </div>
+                                    <div class="price">₹ 40,000</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- August 2025 -->
+                        <div class="month-group">
+                            <button class="month-header" data-bs-toggle="collapse" data-bs-target="#august2025">
+                                AUGUST 2025 <span class="arrow">▲</span>
+                            </button>
+                            <div id="august2025" class="collapse show">
+                                <div class="date-option fully-booked">
+                                    <div class="date-details">
+                                        <strong>TUESDAY 3rd AUGUST 2025</strong>
+                                        <small>to FRIDAY 8th 2025</small>
+                                        <span class="status">FULLY BOOKED</span>
+                                    </div>
+                                    <div class="price">SOLD OUT</div>
+                                </div>
+                                <div class="date-option available">
+                                    <div class="date-details">
+                                        <strong>SUNDAY 22nd AUGUST 2025</strong>
+                                        <small>to SATURDAY 28th 2025</small>
+                                        <span class="status">AVAILABLE</span>
+                                    </div>
+                                    <div class="price">
+                                        ₹ 40,000
+                                        <button class="book-this-date">BOOK THIS DATE</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- September 2025 -->
+                        <div class="month-group">
+                            <button class="month-header" data-bs-toggle="collapse" data-bs-target="#september2025">
+                                SEPTEMBER 2025 <span class="arrow">▲</span>
+                            </button>
+                            <div id="september2025" class="collapse show">
+                                <div class="date-option available">
+                                    <div class="date-details">
+                                        <strong>SUNDAY 2nd SEPTEMBER 2025</strong>
+                                        <small>to SATURDAY 8th 2025</small>
+                                        <span class="status">AVAILABLE</span>
+                                    </div>
+                                    <div class="price">
+                                        ₹ 40,000
+                                        <button class="book-this-date">BOOK THIS DATE</button>
+                                    </div>
+                                </div>
+                                <div class="date-option available">
+                                    <div class="date-details">
+                                        <strong>SUNDAY 22nd SEPTEMBER 2025</strong>
+                                        <small>to SATURDAY 28th 2025</small>
+                                        <span class="status">AVAILABLE</span>
+                                    </div>
+                                    <div class="price">
+                                        ₹ 40,000
+                                        <button class="book-this-date">BOOK THIS DATE</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- October 2025 -->
+                        <div class="month-group">
+                            <button class="month-header" data-bs-toggle="collapse" data-bs-target="#october2025">
+                                OCTOBER 2025 <span class="arrow">▲</span>
+                            </button>
+                            <div id="october2025" class="collapse show">
+                                <div class="date-option available">
+                                    <div class="date-details">
+                                        <strong>SUNDAY 22nd JULY 2025</strong>
+                                        <small>to SATURDAY 28nd 2025</small>
+                                        <span class="status">AVAILABLE</span>
+                                    </div>
+                                    <div class="price">
+                                        ₹ 40,000
+                                        <button class="book-this-date">BOOK THIS DATE</button>
+                                    </div>
+                                </div>
+                                <div class="date-option available">
+                                    <div class="date-details">
+                                        <strong>SUNDAY 22nd JULY 2025</strong>
+                                        <small>to SATURDAY 28nd 2025</small>
+                                        <span class="status">AVAILABLE</span>
+                                    </div>
+                                    <div class="price">
+                                        ₹ 40,000
+                                        <button class="book-this-date">BOOK THIS DATE</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- November 2025 -->
+                        <div class="month-group">
+                            <button class="month-header" data-bs-toggle="collapse" data-bs-target="#november2025">
+                                NOVEMBER 2025 <span class="arrow">▲</span>
+                            </button>
+                            <div id="november2025" class="collapse show">
+                                <div class="date-option available">
+                                    <div class="date-details">
+                                        <strong>FRIDAY 2nd NOVEMBER 2025</strong>
+                                        <small>to SATURDAY 10th 2025</small>
+                                        <span class="status">AVAILABLE</span>
+                                    </div>
+                                    <div class="price">
+                                        ₹ 40,000
+                                        <button class="book-this-date">BOOK THIS DATE</button>
+                                    </div>
+                                </div>
+                                <div class="date-option available">
+                                    <div class="date-details">
+                                        <strong>SUNDAY 22nd NOVEMBER 2025</strong>
+                                        <small>to SATURDAY 28th 2025</small>
+                                        <span class="status">AVAILABLE</span>
+                                    </div>
+                                    <div class="price">
+                                        ₹ 40,000
+                                        <button class="book-this-date">BOOK THIS DATE</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- December 2025 -->
+                        <div class="month-group">
+                            <button class="month-header" data-bs-toggle="collapse" data-bs-target="#december2025">
+                                DECEMBER 2025 <span class="arrow">▲</span>
+                            </button>
+                            <div id="december2025" class="collapse show">
+                                <div class="date-option available">
+                                    <div class="date-details">
+                                        <strong>SUNDAY 22nd DECEMBER 2025</strong>
+                                        <small>to SATURDAY 28th 2025</small>
+                                        <span class="status">AVAILABLE</span>
+                                    </div>
+                                    <div class="price">
+                                        ₹ 40,000
+                                        <button class="book-this-date">BOOK THIS DATE</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Other Options -->
+                <div class="col-md-6">
+                    <!-- Weather -->
+                    <div class="option-group">
+                        <button class="option-header" data-bs-toggle="collapse" data-bs-target="#weather">
+                            🌤️ WEATHER <span class="arrow">▼</span>
+                        </button>
+                        <div id="weather" class="collapse">
+                            <div class="option-content">
+                                <p>Catch your first glimpse of this beautiful Atlantic archipelago as you approach Madeira Airport, then make your way to your hotel in the coastal town of Machico (just 10 minutes drive from the airport). Later, you'll meet your guide and fellow adventurers for dinner and hear all about the challenge ahead.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Itinerary -->
+                    <div class="option-group">
+                        <button class="option-header" data-bs-toggle="collapse" data-bs-target="#itinerary">
+                            ☀️ ITINERARY <span class="arrow">▼</span>
+                        </button>
+                        <div id="itinerary" class="collapse">
+                            <div class="option-content">
+                                <div class="itinerary-day">
+                                    <h5>DAY 1 & DAY 2</h5>
+                                    <p><strong>Welcome to Madeira-the 'PEARL OF THE ATLANTIC'</strong></p>
+                                    <img src="images/costa rica.png" alt="Day 1-2" class="itinerary-img">
+                                    <p>Catch your first glimpse of this beautiful Atlantic archipelago as you approach Madeira Airport, then make your way to your hotel in the coastal town of Machico (just 10 minutes drive from the airport). Later, you'll meet your guide and fellow adventurers for dinner and hear all about the challenge ahead.</p>
+                                </div>
+                                <div class="itinerary-day">
+                                    <h5>DAY 3 & DAY 4</h5>
+                                    <p><strong>Cliff Trails & Coastal View</strong></p>
+                                    <img src="images/fuji mount.png" alt="Day 3-4" class="itinerary-img">
+                                    <p>Catch your first glimpse of this beautiful Atlantic archipelago as you approach Madeira Airport, then make your way to your hotel in the coastal town of Machico (just 10 minutes drive from the airport). Later, you'll meet your guide and fellow adventurers for dinner and hear all about the challenge ahead.</p>
+                                </div>
+                                <div class="itinerary-day">
+                                    <h5>DAY 5 & DAY 6</h5>
+                                    <p><strong>Into the UNESCO-listed Laurisilva</strong></p>
+                                    <p>🥾 Hiking - 7hrs • 14km • 850m UP • 100m DOWN</p>
+                                    <img src="images/kiliman.png" alt="Day 5-6" class="itinerary-img">
+                                    <p>Catch your first glimpse of this beautiful Atlantic archipelago as you approach Madeira Airport, then make your way to your hotel in the coastal town of Machico (just 10 minutes drive from the airport). Later, you'll meet your guide and fellow adventurers for dinner and hear all about the challenge ahead.</p>
+                                </div>
+                                <div class="itinerary-day">
+                                    <h5>DAY 7</h5>
+                                    <p><strong>Goodbye Madeira!</strong></p>
+                                    <img src="images/asia home.png" alt="Day 7" class="itinerary-img">
+                                    <p>Catch your first glimpse of this beautiful Atlantic archipelago as you approach Madeira Airport, then make your way to your hotel in the coastal town of Machico (just 10 minutes drive from the airport). Later, you'll meet your guide and fellow adventurers for dinner and hear all about the challenge ahead.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Food & Accommodation -->
+                    <div class="option-group">
+                        <button class="option-header" data-bs-toggle="collapse" data-bs-target="#foodAccommodation">
+                            😊 FOOD & ACCOMMODATION <span class="arrow">▼</span>
+                        </button>
+                        <div id="foodAccommodation" class="collapse">
+                            <div class="option-content">
+                                <div class="food-day">
+                                    <h6>🕐 DAY 1</h6>
+                                    <p>Hotel - Twin Share</p>
+                                    <div class="meal-indicators">
+                                        <span class="meal-no">❌ Breakfast</span>
+                                        <span class="meal-no">❌ Lunch</span>
+                                        <span class="meal-no">❌ Dinner</span>
+                                    </div>
+                                </div>
+                                <div class="food-day">
+                                    <h6>🕐 DAY 2 & DAY 3</h6>
+                                    <p>Hotel - Twin Share</p>
+                                    <div class="meal-indicators">
+                                        <span class="meal-yes">✅ Breakfast</span>
+                                        <span class="meal-yes">✅ Lunch</span>
+                                        <span class="meal-yes">✅ Dinner</span>
+                                    </div>
+                                </div>
+                                <div class="food-day">
+                                    <h6>🕐 DAY 4</h6>
+                                    <p>Mountain Hut - Same Sex Dorm</p>
+                                    <div class="meal-indicators">
+                                        <span class="meal-yes">✅ Breakfast</span>
+                                        <span class="meal-yes">✅ Lunch</span>
+                                        <span class="meal-yes">✅ Dinner</span>
+                                    </div>
+                                </div>
+                                <div class="food-day">
+                                    <h6>🕐 DAY 4 - DAY 5</h6>
+                                    <p>Hotel - Twin Share</p>
+                                    <div class="meal-indicators">
+                                        <span class="meal-yes">✅ Breakfast</span>
+                                        <span class="meal-yes">✅ Lunch</span>
+                                        <span class="meal-yes">✅ Dinner</span>
+                                    </div>
+                                </div>
+                                <div class="food-day">
+                                    <h6>🕐 DAY 7</h6>
+                                    <p>Hotel - Twin Share</p>
+                                    <div class="meal-indicators">
+                                        <span class="meal-yes">✅ Breakfast</span>
+                                        <span class="meal-no">❌ Lunch</span>
+                                        <span class="meal-no">❌ Dinner</span>
+                                    </div>
+                                </div>
+                                <div class="food-section">
+                                    <h6>🍽️ What is Food like?</h6>
+                                    <img src="images/istockphoto-1138159915-612x612.jpg" alt="Food" class="food-img">
+                                    <p>Catch your first glimpse of this beautiful Atlantic archipelago as you approach Madeira Airport, then make your way to your hotel in the coastal town of Machico (just 10 minutes drive from the airport). Later, you'll meet your guide and fellow adventurers for dinner and hear all about the challenge ahead.</p>
+                                </div>
+                                <div class="food-section">
+                                    <h6>🏠 What is Accommodation like?</h6>
+                                    <img src="images/easy (1).png" alt="Accommodation" class="food-img">
+                                    <p>Catch your first glimpse of this beautiful Atlantic archipelago as you approach Madeira Airport, then make your way to your hotel in the coastal town of Machico (just 10 minutes drive from the airport). Later, you'll meet your guide and fellow adventurers for dinner and hear all about the challenge ahead.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Difficulty Rating -->
+                    <div class="option-group">
+                        <button class="option-header" data-bs-toggle="collapse" data-bs-target="#difficulty">
+                            🏔️ DIFFICULTY RATING <span class="arrow">▼</span>
+                        </button>
+                        <div id="difficulty" class="collapse">
+                            <div class="option-content">
+                                <div class="difficulty-section">
+                                    <h6>⚡ How difficult it is?</h6>
+                                    <img src="images/challenging (1).png" alt="Difficulty" class="difficulty-img">
+                                    <p>Catch your first glimpse of this beautiful Atlantic archipelago as you approach Madeira Airport, then make your way to your hotel in the coastal town of Machico (just 10 minutes drive from the airport). Later, you'll meet your guide and fellow adventurers for dinner and hear all about the challenge ahead.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destination Tabs -->
+    <section class="destination-section">
+        <div class="container">
+            <div class="destination-tabs">
+                <ul class="nav nav-tabs" id="destinationTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="destination-tab" data-bs-toggle="tab" data-bs-target="#destination" type="button" role="tab">Destination</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="activities-tab" data-bs-toggle="tab" data-bs-target="#activities" type="button" role="tab">Activities</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="collections-tab" data-bs-toggle="tab" data-bs-target="#collections" type="button" role="tab">Collections</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="destinationTabsContent">
+                    <div class="tab-pane fade show active" id="destination" role="tabpanel">
+                        <div class="destination-grid">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/africa home.png" alt="Africa" class="destination-image">
+                                        <h5>Africa</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/europe home.png" alt="Europe" class="destination-image">
+                                        <h5>Europe</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/asia home.png" alt="Asia" class="destination-image">
+                                        <h5>Asia</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/north america home.png" alt="North America" class="destination-image">
+                                        <h5>North America</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/south america home.png" alt="South America" class="destination-image">
+                                        <h5>South America</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/oceania home.png" alt="Oceania" class="destination-image">
+                                        <h5>Oceania</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="activities" role="tabpanel">
+                        <div class="activities-grid">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/costa rica.png" alt="Hiking" class="destination-image">
+                                        <h5>Hiking</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/fuji mount.png" alt="Cycling" class="destination-image">
+                                        <h5>Cycling</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/kiliman.png" alt="Rafting" class="destination-image">
+                                        <h5>Rafting</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/africa home.png" alt="Snorkeling" class="destination-image">
+                                        <h5>Snorkeling</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/europe home.png" alt="Wild Swimming" class="destination-image">
+                                        <h5>Wild Swimming</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/asia home.png" alt="Northern Lights" class="destination-image">
+                                        <h5>Northern Lights</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="collections" role="tabpanel">
+                        <div class="collections-grid">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/north america home.png" alt="New Adventure" class="destination-image">
+                                        <h5>New Adventure</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/south america home.png" alt="Winter Sun" class="destination-image">
+                                        <h5>Winter Sun</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/africa home.png" alt="Desert & Dunes" class="destination-image">
+                                        <h5>Desert & Dunes</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/costa rica.png" alt="Foodie Adventure" class="destination-image">
+                                        <h5>Foodie Adventure</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/fuji mount.png" alt="Jungle Adventure" class="destination-image">
+                                        <h5>Jungle Adventure</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="destination-card">
+                                        <img src="images/oceania home.png" alt="Islands Adventure" class="destination-image">
+                                        <h5>Islands Adventure</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="popular-destinations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular destinations</h2>
+                <p>Most popular destinations around the world, from historical places to natural wonders.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="destination-highlight">
+                        <img src="images/fuji mount.png" alt="Mount Fuji" class="destination-highlight-image">
+                        <div class="destination-highlight-content">
+                            <div class="rating">
+                                <img src="images/rating star icon.png" alt="Star" class="star-icon">
+                                <span>4.8</span>
+                            </div>
+                            <h4>Mount Fuji, Tokyo</h4>
+                            <p class="destination-description">One of the most iconic mountains in the world, offering breathtaking views and spiritual significance.</p>
+                            <div class="price-highlight">
+                                <img src="images/rupee icon.png" alt="rupee" class="rupee-icon">
+                                <span>80,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="destination-highlight">
+                        <img src="images/kiliman.png" alt="Kilimanjaro" class="destination-highlight-image">
+                        <div class="destination-highlight-content">
+                            <div class="rating">
+                                <img src="images/rating star icon.png" alt="Star" class="star-icon">
+                                <span>4.9</span>
+                            </div>
+                            <h4>Mount Kilimanjaro, Tanzania</h4>
+                            <p class="destination-description">Africa's highest peak, a challenging trek with stunning landscapes and diverse ecosystems.</p>
+                            <div class="price-highlight">
+                                <img src="images/rupee icon.png" alt="rupee" class="rupee-icon">
+                                <span>1,20,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="destination-highlight">
+                        <img src="images/costa rica.png" alt="Costa Rica" class="destination-highlight-image">
+                        <div class="destination-highlight-content">
+                            <div class="rating">
+                                <img src="images/rating star icon.png" alt="Star" class="star-icon">
+                                <span>4.7</span>
+                            </div>
+                            <h4>Costa Rica Adventure</h4>
+                            <p class="destination-description">Explore rainforests, volcanoes, and wildlife in this Central American paradise.</p>
+                            <div class="price-highlight">
+                                <img src="images/rupee icon.png" alt="rupee" class="rupee-icon">
+                                <span>95,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           >
+    </section>
+
+    <!-- Difficulty Levels -->
+    <section class="difficulty-levels">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Challenge</h2>
+                <p>Find the perfect adventure that matches your skill level and experience.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="difficulty-card">
+                        <img src="images/easy.png" alt="Easy" class="difficulty-icon">
+                        <h4>Easy</h4>
+                        <p>Perfect for beginners and families</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="difficulty-card">
+                        <img src="images/moderate.png" alt="Moderate" class="difficulty-icon">
+                        <h4>Moderate</h4>
+                        <p>Some experience required</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="difficulty-card">
+                        <img src="images/challenging.png" alt="Challenging" class="difficulty-icon">
+                        <h4>Challenging</h4>
+                        <p>For experienced adventurers</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="difficulty-card">
+                        <img src="images/tough.png" alt="Tough" class="difficulty-icon">
+                        <h4>Tough</h4>
+                        <p>Only for the most experienced</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Guides -->
+    <section class="expert-guides">
+        <div class="container">
+            <div class="section-header">
+                <h2>Expert Guides</h2>
+                <p>Our experienced guides will ensure your safety and help you discover the best of each destination.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="guide-card">
+                        <img src="images/tour guide 1.png" alt="Guide 1" class="guide-image">
+                        <h4>Sarah Johnson</h4>
+                        <p>Mountain Expert - 8 years experience</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="guide-card">
+                        <img src="images/tour guide 2.png" alt="Guide 2" class="guide-image">
+                        <h4>Marcus Rodriguez</h4>
+                        <p>Wildlife Specialist - 12 years experience</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="guide-card">
+                        <img src="images/tour guide 3.png" alt="Guide 3" class="guide-image">
+                        <h4>Elena Petrov</h4>
+                        <p>Cultural Guide - 10 years experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Features -->
+    <section class="travel-features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <img src="images/plane icon.png" alt="Flight" class="feature-icon">
+                        <h4>Flight Included</h4>
+                        <p>All flights are included in our packages</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <img src="images/train icon.png" alt="Transport" class="feature-icon">
+                        <h4>Local Transport</h4>
+                        <p>Comfortable transportation throughout your journey</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <img src="images/car icon.png" alt="Car" class="feature-icon">
+                        <h4>Private Transfers</h4>
+                        <p>Private car transfers for your convenience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features -->
+    <section class="additional-features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="additional-feature">
+                        <img src="images/bottom icon.png" alt="Feature 1" class="additional-icon">
+                        <h5>24/7 Support</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="additional-feature">
+                        <img src="images/bottom icon 1.png" alt="Feature 2" class="additional-icon">
+                        <h5>Best Price Guarantee</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="additional-feature">
+                        <img src="images/bottom icon 2.png" alt="Feature 3" class="additional-icon">
+                        <h5>Flexible Booking</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="additional-feature">
+                        <img src="images/bottom icon 3.png" alt="Feature 4" class="additional-icon">
+                        <h5>Expert Local Guides</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-image">
+            <img src="images/footer image.png" alt="Footer" class="img-fluid">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="footer-logo">Adventurage</h3>
+                    <p>-BOOK WITH CONFIDENCE-</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>ABOUT</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Our Impact</a></li>
+                        <li><a href="#">Meet the Team</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>CUSTOMERS</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Agency Booking</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p>&copy; Copyright Adventurage Ltd Registration Number 1.0 2458697</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

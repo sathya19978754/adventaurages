@@ -1,0 +1,2022 @@
+/* Custom CSS for Adventurage */
+:root {
+    --primary-color: #16404D;
+    --white: #FFFFFF;
+    --text-color: #131313;
+    --light-bg: #F8F9FA;
+    --border-color: #E0E0E0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Top Banner */
+.top-banner {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+.logo {
+    font-family: 'Dokdo', cursive;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('images/header image.png');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text {
+    text-align: right;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.discover-btn {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.discover-btn:hover {
+    background-color: #0f2d35;
+    transform: translateY(-2px);
+}
+
+/* Search Section */
+.search-section {
+    background-color: var(--light-bg);
+    padding: 40px 0;
+}
+
+.search-form {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+}
+
+.form-control {
+    padding-left: 50px;
+    height: 50px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(22, 64, 77, 0.25);
+}
+
+/* Destination Section */
+.destination-section {
+    padding: 60px 0;
+}
+
+.destination-tabs .nav-tabs {
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 40px;
+}
+
+.destination-tabs .nav-link {
+    border: none;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 16px;
+    padding: 15px 30px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.destination-tabs .nav-link.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    background-color: transparent;
+}
+
+.destination-card {
+    text-align: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.destination-card h5 {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+/* Tour Packages Section */
+.tour-packages-section {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.tour-packages-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.tour-packages-section p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.tour-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.tour-card:hover {
+    transform: translateY(-5px);
+}
+
+.tour-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.tour-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tour-content {
+    padding: 20px;
+}
+
+.tour-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tour-header h5 {
+    font-weight: 600;
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.star-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.rating span {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.tour-content h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.tour-price {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.rupee-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.tour-features {
+    list-style: none;
+    padding: 0;
+}
+
+.tour-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.tour-features img {
+    width: 16px;
+    height: 16px;
+}
+
+.view-all-btn {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.view-all-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Difficulty Section */
+.difficulty-section {
+    padding: 80px 0;
+}
+
+.difficulty-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.difficulty-section p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.difficulty-card {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 15px;
+    background-color: var(--light-bg);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.difficulty-card:hover {
+    transform: translateY(-5px);
+}
+
+.difficulty-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.difficulty-card h5 {
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+/* Tour Guide Section */
+.tour-guide-section {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.tour-guide-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.guide-stats {
+    text-align: right;
+}
+
+.guide-stats h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.guide-stats p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.guide-card {
+    text-align: center;
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+}
+
+.guide-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.guide-info h5 {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.guide-info p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Transport Section */
+.transport-section {
+    padding: 80px 0;
+}
+
+.transport-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.transport-section p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.transport-options h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.transport-options h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.transport-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.transport-icon {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.transport-item h5 {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.transport-item p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Bottom Features Section */
+.bottom-features-section {
+    padding: 60px 0;
+    background-color: var(--light-bg);
+}
+
+.feature-card {
+    text-align: center;
+    padding: 30px 20px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0;
+}
+
+.footer-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.footer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer .container {
+    padding: 40px 15px;
+}
+
+.footer-logo {
+    font-family: 'Dokdo', cursive;
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.footer h5 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+}
+
+/* Tours Page Specific Styles */
+.filters-sidebar {
+    background-color: var(--light-bg);
+    padding: 20px;
+    border-radius: 10px;
+    position: sticky;
+    top: 100px;
+}
+
+.search-input {
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 14px;
+}
+
+.input-group-text {
+    background-color: var(--white);
+    border: 2px solid var(--border-color);
+    border-left: none;
+}
+
+.filter-section {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.filter-header {
+    background-color: var(--white);
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s ease;
+}
+
+.filter-header:hover {
+    background-color: rgba(229, 243, 246, 0.5);
+}
+
+.filter-header h5 {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.filter-content {
+    padding: 15px;
+    background-color: var(--white);
+}
+
+.form-check {
+    margin-bottom: 10px;
+}
+
+.form-check-label {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-left: 8px;
+}
+
+.tour-result-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tour-result-card:hover {
+    transform: translateY(-5px);
+}
+
+.tour-result-card .tour-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.tour-result-card .tour-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.difficulty-badge {
+    position: absolute;
+    top: 10px;
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.easy-badge {
+    background-color: #4CAF50;
+    left: 10px;
+}
+
+.tough-badge {
+    background-color: #F44336;
+    right: 10px;
+}
+
+.tour-card-content {
+    padding: 20px;
+}
+
+.tour-location {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.tour-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.tour-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.tour-rating span {
+    font-size: 14px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.tour-price {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tour-price span {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.tour-availability {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.difficulty-level {
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--white);
+    display: inline-block;
+}
+
+.difficulty-level.easy {
+    background-color: #4CAF50;
+}
+
+.difficulty-level.moderate {
+    background-color: #FF9800;
+}
+
+.difficulty-level.challenging {
+    background-color: #FF5722;
+}
+
+.difficulty-level.tough {
+    background-color: #F44336;
+}
+
+.nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+/* About and Contact Pages */
+.about-content-section,
+.contact-content-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.about-text,
+.contact-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.about-text p,
+.contact-text p {
+    margin-bottom: 20px;
+}
+
+.content-policy-list {
+    padding-left: 30px;
+    margin-top: 20px;
+}
+
+.content-policy-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.contact-section {
+    margin-bottom: 30px;
+}
+
+.contact-section h4 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.availability-section h4 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.availability-hours {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hours-group {
+    flex: 1;
+    min-width: 250px;
+}
+
+.hours-group strong {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.hours-group ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.hours-group li {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.contact-methods h4 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-method {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.contact-method strong {
+    color: var(--text-color);
+}
+
+.contact-method a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact-method a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section with Background */
+.hero-section-with-bg {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    padding: 100px 0;
+}
+
+.hero-content-left {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-title-main {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.rating-section {
+    margin-bottom: 20px;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.rating-text {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.location-info-main {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.location-info-main span {
+    color: white;
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.2);
+    padding: 5px 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.hero-description-main {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.whats-included-main h3 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.included-items-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.included-item-main {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.tick-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.price-section-main {
+    margin-top: 30px;
+}
+
+.price-main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.price-main .amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.rupee-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.price-note {
+    color: white;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Dropdown Menus */
+.booking-options-main {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.dropdown-section-main {
+    margin-bottom: 15px;
+}
+
+.dropdown-btn-main {
+    width: 100%;
+    text-align: left;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-btn-main:hover {
+    background: #0f2c37;
+    color: white;
+}
+
+.dropdown-menu-main {
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    padding: 0;
+}
+
+.dropdown-header-main {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    margin: 0;
+    font-weight: 600;
+    border-radius: 0;
+}
+
+.date-item-main {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date-info strong {
+    display: block;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.date-info small {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.status {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.status.fully-booked {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.status.available {
+    background: #e8f5e8;
+    color: #2e7d32;
+}
+
+.book-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    margin-top: 5px;
+}
+
+/* Itinerary Menu */
+.itinerary-item {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.itinerary-item h6 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.itinerary-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.itinerary-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Food Menu */
+.food-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.food-item h6 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.meal-status {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.meal {
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 12px;
+}
+
+.meal.included {
+    background: #e8f5e8;
+    color: #2e7d32;
+}
+
+.meal.not-included {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.food-section {
+    padding: 20px;
+}
+
+.food-image {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.food-text {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Difficulty Menu */
+.difficulty-item {
+    padding: 20px;
+}
+
+.difficulty-item h6 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.difficulty-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+/* Weather Menu */
+.weather-item {
+    padding: 20px;
+}
+
+.weather-item p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Responsive Design for Hero Section */
+@media (max-width: 768px) {
+    .hero-section-with-bg {
+        min-height: auto;
+        padding: 50px 0;
+    }
+    
+    .hero-title-main {
+        font-size: 2rem;
+    }
+    
+    .location-info-main {
+        gap: 10px;
+    }
+    
+    .included-items-main {
+        grid-template-columns: 1fr;
+    }
+    
+    .booking-options-main {
+        margin-top: 30px;
+        padding: 20px;
+    }
+    
+    .dropdown-menu-main {
+        max-height: 300px;
+    }
+}
+
+/* Booking Options Section */
+.booking-options-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.departure-dates-section h3 {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+.month-group {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.month-header {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.month-header:hover {
+    background-color: #0f2c37;
+}
+
+.arrow {
+    font-size: 0.8rem;
+}
+
+.date-option {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.date-option:last-child {
+    border-bottom: none;
+}
+
+.date-details strong {
+    display: block;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+.date-details small {
+    color: #666;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.date-details .status {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.date-option.fully-booked .status {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.date-option.available .status {
+    background-color: #e8f5e8;
+    color: #2e7d32;
+}
+
+.date-option .price {
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: right;
+}
+
+.book-this-date {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.book-this-date:hover {
+    background-color: #0f2c37;
+}
+
+/* Option Groups */
+.option-group {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.option-header {
+    width: 100%;
+    background-color: #e9ecef;
+    color: var(--text-color);
+    border: none;
+    padding: 15px 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.option-header:hover {
+    background-color: #dee2e6;
+}
+
+.option-content {
+    padding: 20px;
+    background-color: white;
+}
+
+.option-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Itinerary Styles */
+.itinerary-day {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.itinerary-day:last-child {
+    border-bottom: none;
+}
+
+.itinerary-day h5 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.itinerary-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* Food & Accommodation Styles */
+.food-day {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.food-day h6 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.meal-indicators {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.meal-yes {
+    background-color: #e8f5e8;
+    color: #2e7d32;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.meal-no {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.food-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.food-section h6 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.food-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* Difficulty Styles */
+.difficulty-section h6 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.difficulty-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .booking-options-section {
+        padding: 40px 0;
+    }
+    
+    .month-header,
+    .option-header {
+        font-size: 0.9rem;
+        padding: 12px 15px;
+    }
+    
+    .date-option {
+        padding: 12px 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .meal-indicators {
+        gap: 5px;
+    }
+    
+    .itinerary-img,
+    .food-img,
+    .difficulty-img {
+        height: 120px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .search-form {
+        padding: 20px;
+    }
+    
+    .tour-packages-section h2,
+    .difficulty-section h2,
+    .tour-guide-section h2,
+    .transport-section h2 {
+        font-size: 2rem;
+    }
+    
+    .guide-stats {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .transport-options {
+        margin-top: 30px;
+    }
+    
+    .destination-tabs .nav-link {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .tour-packages-section h2,
+    .difficulty-section h2,
+    .tour-guide-section h2,
+    .transport-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .form-control {
+        padding-left: 15px;
+        height: 45px;
+    }
+    
+    .input-icon {
+        display: none;
+    }
+}
+
+/* Login Page Styles */
+.login-container {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.login-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.login-label {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.login-input {
+    height: 50px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.login-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(22, 64, 77, 0.25);
+}
+
+.login-continue-btn {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 15px 40px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+}
+
+.login-continue-btn:hover {
+    background-color: #0f2d35;
+    transform: translateY(-2px);
+}
+
+/* Booking Page Styles */
+.booking-container {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.booking-date-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.traveler-heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.traveler-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.counter-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.counter-btn:hover {
+    background-color: #0f2d35;
+    transform: scale(1.1);
+}
+
+.traveler-count {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    min-width: 120px;
+    text-align: center;
+}
+
+.price-display {
+    text-align: center;
+}
+
+.price-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.section-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.important-note {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #856404;
+}
+
+.booking-label {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.booking-input {
+    height: 50px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.booking-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(22, 64, 77, 0.25);
+}
+
+.booking-checkboxes {
+    margin: 30px 0;
+}
+
+.booking-checkboxes .form-check {
+    margin-bottom: 15px;
+}
+
+.booking-checkboxes .form-check-label {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.booking-continue-btn {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 15px 40px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.booking-continue-btn:hover {
+    background-color: #0f2d35;
+    transform: translateY(-2px);
+}
+
+/* Payment Page Styles */
+.payment-container {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.payment-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.payment-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.payment-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.payment-methods {
+    margin-bottom: 30px;
+}
+
+.payment-section-heading {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light-bg);
+}
+
+.payment-label {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.payment-input {
+    height: 50px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.payment-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(22, 64, 77, 0.25);
+}
+
+.payment-card-section {
+    margin-bottom: 40px;
+}
+
+.payment-address-section {
+    margin-bottom: 40px;
+}
+
+.payment-pay-btn {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 15px 40px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+}
+
+.payment-pay-btn:hover {
+    background-color: #0f2d35;
+    transform: translateY(-2px);
+}
+
+/* Confirmation Page Styles */
+.confirmation-container {
+    background-color: var(--white);
+    padding: 60px 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-icon {
+    margin-bottom: 30px;
+}
+
+.confirmation-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.confirmation-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.confirmation-btn {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 15px 30px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.confirmation-btn:hover {
+    background-color: #0f2d35;
+    transform: translateY(-2px);
+}
+
+/* Footer Styles for Booking Pages */
+.footer-section {
+    margin-bottom: 30px;
+}
+
+.footer-tagline {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.footer-features {
+    margin-bottom: 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #666;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    margin-top: 30px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Responsive styles for booking pages */
+@media (max-width: 768px) {
+    .login-container,
+    .booking-container,
+    .payment-container,
+    .confirmation-container {
+        padding: 20px;
+        margin: 0 15px;
+    }
+    
+    .traveler-counter {
+        gap: 15px;
+    }
+    
+    .counter-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .payment-amount {
+        font-size: 2rem;
+    }
+    
+    .confirmation-heading {
+        font-size: 1.5rem;
+    }
+}
