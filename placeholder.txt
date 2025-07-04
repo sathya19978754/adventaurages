@@ -1,0 +1,17 @@
+This directory should contain all images and icons from the provided ZIP files.
+
+Expected structure:
+- Hero background images (Aurora + forest)
+- Destination images (Europe, Asia, Africa, Americas)
+- Tour images
+- Icons for activities, difficulty levels, features
+- Footer image
+- Any other visual assets
+
+To use the actual images:
+1. Extract images from the provided ZIP files
+2. Place them in this /images directory
+3. Update the HTML src attributes to point to the correct image paths
+4. Replace SVG placeholders with actual images where needed
+
+Current placeholders are SVG elements that can be easily replaced with <img> tags pointing to the actual image files.
